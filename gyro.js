@@ -1,7 +1,7 @@
 
-function updateFieldIfNotNull(fieldName, value, precision=10){
+function updateFieldIfNotNull(fieldName, value){
   if (value != null)
-    document.getElementById(fieldName).innerHTML = value.toFixed(precision);
+    document.getElementById(fieldName).innerHTML = value.toFixed();
 }
 
 function handleMotion(event) {
@@ -11,9 +11,7 @@ function handleMotion(event) {
   updateFieldIfNotNull('Gyroscope_y', event.rotationRate.gamma);
 }
 
-let is_running = false;
-let demo_button = document.getElementById("start_demo");
-demo_button.onclick = function(e) {
+(e) =>{
   e.preventDefault();
   
   // Request permission for iOS 13+ devices
@@ -23,13 +21,8 @@ demo_button.onclick = function(e) {
   ) {
     DeviceMotionEvent.requestPermission();
   }
-  if (is_running){
-    window.removeEventListener("devicemotion", handleMotion);
-    demo_button.innerHTML = "Start demo";
-    is_running = false;
-  }else{
+  
+  {
     window.addEventListener("devicemotion", handleMotion);
-    document.getElementById("start_demo").innerHTML = "Stop demo";
-    is_running = true;
   }
 };
