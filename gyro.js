@@ -6,7 +6,7 @@ function updateFieldIfNotNull(fieldName, value){
 }
 
 function handleMotion(event) {
-
+  console.log('hello');
   updateFieldIfNotNull('Gyroscope_z', event.rotationRate.alpha);
   updateFieldIfNotNull('Gyroscope_x', event.rotationRate.beta);
   updateFieldIfNotNull('Gyroscope_y', event.rotationRate.gamma);
