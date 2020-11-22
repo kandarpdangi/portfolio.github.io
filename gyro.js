@@ -11,7 +11,7 @@ function handleMotion(event) {
   updateFieldIfNotNull('Gyroscope_y', event.rotationRate.gamma);
 }
 
-(e) =>{
+function gyro(e){
   e.preventDefault();
   
   // Request permission for iOS 13+ devices
@@ -26,3 +26,5 @@ function handleMotion(event) {
     window.addEventListener("devicemotion", handleMotion);
   }
 };
+
+gyro(e);
