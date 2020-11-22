@@ -26,5 +26,3 @@ function gyro(e){
     window.addEventListener("devicemotion", handleMotion);
   }
 };
-
-gyro(e);
