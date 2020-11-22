@@ -2,6 +2,7 @@
 function updateFieldIfNotNull(fieldName, value){
   if (value != null)
     document.getElementById(fieldName).innerHTML = value.toFixed();
+    console.log(fieldName ,' - ' ,value);
 }
 
 function handleMotion(event) {
@@ -11,9 +12,7 @@ function handleMotion(event) {
   updateFieldIfNotNull('Gyroscope_y', event.rotationRate.gamma);
 }
 
-function gyros(e){
-  
-  
+function gyros(e){  
   // Request permission for iOS 13+ devices
   if (
     DeviceMotionEvent &&
