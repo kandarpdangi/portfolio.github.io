@@ -24,7 +24,6 @@ body {
   align-items: center;
   position: absolute;
   left: 25%;
-
 }
 .windows {
   max-width: 50%;
@@ -76,7 +75,7 @@ body {
   margin-bottom: 10px;
   position: relative;
 }
- 
+
 .about h4 {
   transition: all 0.7s ease-out;
   font-size: 1rem;
@@ -100,7 +99,7 @@ body {
   flex-wrap: wrap;
 }
 .tabs button {
-  padding:12px;
+  padding: 12px;
   margin: 0px 0px 0px 6px;
   background: linear-gradient(
     to left,
